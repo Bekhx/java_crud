@@ -1,32 +1,26 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
+  <div class="wrapper">
     <img
       alt="Vue logo"
       class="logo"
       src="@/assets/real_logo.png"
-      width="125"
-      height="125"
+      width="80"
+      height="80"
     />
-
-    <div class="wrapper">
-      <HelloWorld msg="CRUD operations with products!" />
-
-      <nav>
-        <RouterLink to="/products">Products</RouterLink>
-        <RouterLink to="/products/create">Create Product</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
+.wrapper {
+  width: 500px;
+  margin: auto;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -36,6 +30,9 @@ header {
   display: block;
   margin: 0 auto 2rem;
   border-radius: 65px;
+  position: fixed;
+  top: 15px;
+  left: 20px;
 }
 
 nav {
